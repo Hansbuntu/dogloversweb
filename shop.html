@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dog Lovers Hub - Shop</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/shop.css">
+</head>
+<body>
+
+<!-- Back to Home Button -->
+<section id="Contact">
+    <button onclick="window.location.href='index.html'" class="back-button">← Back to Home</button>
+</section>
+
+ <!-- Cart Button at the top -->
+ <header>
+    <h1>Welcome to the Dog Lovers Shop</h1>
+    <p>Find the best products for your furry friend, from food to toys and more!</p>
+    <button id="cart-button" onclick="toggleCart()">
+        🛒 <span id="cart-count">0</span>
+    </button>
+</header>
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="cart-modal">
+    <div class="cart-content">
+        <span class="close-cart" onclick="toggleCart()">×</span>
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p id="cart-total">Total: $0.00</p>
+        <button onclick="checkout()">Checkout</button>
+    </div>
+</div>
+
+<!-- Shop Categories -->
+<section id="shop-categories">
+    <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('food')">Food</button>
+    <button onclick="filterCategory('toys')">Toys</button>
+    <button onclick="filterCategory('accessories')">Accessories</button>
+</section>
+
+<!-- Product Grid -->
+<main id="shop-products">
+
+    <!-- Product Card 1: Dog Food -->
+    <div class="product-card" data-category="food">
+        <img src="img/premium-dog-food.jpg" alt="Premium Dog Food">
+        <h3>Organic Grain-Free Dog Food</h3>
+        <p class="price">Price: $29.99</p>
+        <div class="description">
+            <p>High-quality, grain-free food packed with natural ingredients. Ideal for dogs with allergies.</p>
+        </div>
+        <button class="buy-now" onclick="addToCart('Organic Grain-Free Dog Food', 29.99)">Buy Now</button>
+    </div>
+
+    <!-- Product Card 2: Dog Treats -->
+    <div class="product-card" data-category="food">
+        <img src="img/dog-treats.jpg" alt="Dog Treats">
+        <h3>Natural Dog Treats</h3>
+        <p class="price">Price: $12.99</p>
+        <div class="description">
+            <p>Healthy and tasty treats made from natural ingredients. Perfect for training.</p>
+        </div>
+        <button class="buy-now" onclick="addToCart('Natural Dog Treats', 12.99)">Buy Now</button>
+    </div>
+
+    <!-- Product Card 3: Interactive Dog Toy -->
+    <div class="product-card" data-category="toys">
+        <img src="img/interactive-toy.jpg" alt="Interactive Dog Toy">
+        <h3>Interactive Treat-Dispensing Toy</h3>
+        <p class="price">Price: $18.99</p>
+        <div class="description">
+            <p>Engages your dog’s mind and body. Dispenses treats as they play, keeping them entertained.</p>
+        </div>
+        <button class="buy-now" onclick="addToCart('Interactive Treat-Dispensing Toy', 18.99)">Buy Now</button>
+    </div>
+
+    <!-- Product Card 4: Durable Chew Toy -->
+    <div class="product-card" data-category="toys">
+        <img src="img/durable-chew-toy.jpg" alt="Durable Chew Toy">
+        <h3>Indestructible Chew Toy</h3>
+        <p class="price">Price: $15.99</p>
+        <div class="description">
+            <p>Made from durable materials, perfect for aggressive chewers. Helps maintain dental health.</p>
+        </div>
+        <button class="buy-now" onclick="addToCart('Indestructible Chew Toy', 15.99)">Buy Now</button>
+    </div>
+
+    <!-- Product Card 5: Dog Leash -->
+    <div class="product-card" data-category="accessories">
+        <img src="img/dog-leash.jpg" alt="Dog Leash">
+        <h3>Reflective Dog Leash</h3>
+        <p class="price">Price: $9.99</p>
+        <div class="description">
+            <p>Strong and reflective for night walks, providing comfort and safety for both dog and owner.</p>
+        </div>
+        <button class="buy-now" onclick="addToCart('Reflective Dog Leash', 9.99)">Buy Now</button>
+    </div>
+
+    <!-- Product Card 6: Dog Collar -->
+    <div class="product-card" data-category="accessories">
+        <img src="img/dog-collar.jpg" alt="Dog Collar">
+        <h3>Adjustable Dog Collar</h3>
+        <p class="price">Price: $10.99</p>
+        <div class="description">
+            <p>Comfortable, adjustable, and durable. Available in various colors and sizes.</p>
+        </div>
+        <button class="buy-now" onclick="addToCart('Adjustable Dog Collar', 10.99)">Buy Now</button>
+    </div>
+
+    <!-- Product Card 7: Orthopedic Dog Bed -->
+    <div class="product-card" data-category="accessories">
+        <img src="img/dog-bed.jpg" alt="Orthopedic Dog Bed">
+        <h3>Orthopedic Dog Bed</h3>
+        <p class="price">Price: $49.99</p>
+        <div class="description">
+            <p>Ultra-comfortable bed with memory foam for support, ideal for older dogs or those with joint issues.</p>
+        </div>
+        <button class="buy-now" onclick="addToCart('Orthopedic Dog Bed', 49.99)">Buy Now</button>
+    </div>
+
+    <!-- Product Card 8: Portable Dog Water Bottle -->
+    <div class="product-card" data-category="accessories">
+        <img src="img/portable-water-bottle.jpg" alt="Portable Dog Water Bottle">
+        <h3>Portable Dog Water Bottle</h3>
+        <p class="price">Price: $15.99</p>
+        <div class="description">
+            <p>Leak-proof water bottle for on-the-go hydration. Perfect for travel and outdoor activities.</p>
+        </div>
+        <button class="buy-now" onclick="addToCart('Portable Dog Water Bottle', 15.99)">Buy Now</button>
+    </div>
+
+</main>
+
+
+
+
+
+<!-- Footer -->
+<footer>
+    <p>Thank you for visiting the Dog Lovers Shop!</p>
+    <a href="index.html">Back to Home</a>
+</footer>
+
+<!-- Link to JavaScript for Category Filtering -->
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="css\style.css">
+</head>
+<body>
+ <!-- Back to Home Button -->
+ <section id="Contact">
+    <button onclick="window.location.href='index.html'" class="back-button">← Back to Home</button>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>We’d love to hear from you! Whether you have questions, feedback, or need help, please get in touch.</p>
+        
+        <form action="submit_form.php" method="post" class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your Email" required>
+            
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+            
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2024 Dog Lovers Hub</p>
+        <p><a href="https://www.facebook.com/YourPageLink">Follow us on Facebook</a></p>
+    </footer>
+</body>
+</html>

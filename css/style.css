@@ -1,0 +1,620 @@
+/* Reset some default styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+/* Header */
+header {
+    background-color: #3b5998; /* Facebook-inspired blue */
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Featured Section */
+#featured-carousel #carousel-image {
+    width: 500px;          /* Set the desired width */
+    height: 300px;         /* Set the desired height */
+    object-fit: cover;     /* Ensures the image fills the area while maintaining its aspect ratio */
+    border-radius: 8px;    /* Optional: Adds rounded corners */
+    transition: opacity 1s ease-in-out;
+}
+
+#featured-carousel {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+#featured-carousel .featured-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Carousel Image Styling */
+#featured-carousel #carousel-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Text Styling */
+#featured-carousel .featured-text h3 {
+    color: #3b5998;
+    font-size: 1.8rem;
+    margin: 1rem 0 0.5rem;
+}
+
+#featured-carousel .featured-text p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+#featured-carousel .featured-text button {
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#featured-carousel .featured-text button:hover {
+    background-color: #333;
+}
+
+
+
+/* Blog Section */
+#blog {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+.blog-posts {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.blog-posts article {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.blog-posts h3 {
+    color: #3b5998;
+    font-size: 1.3rem;
+}
+
+.blog-posts a {
+    color: #3b5998;
+    text-decoration: none;
+}
+
+.blog-posts a:hover {
+    text-decoration: underline;
+}
+
+/* Care Tips Section */
+#care-tips {
+    padding: 2rem;
+    background-color: #fff;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+/* Shop Section */
+#shop {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.product {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    width: 150px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product p {
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+#shop button {
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+#shop button:hover {
+    background-color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #3b5998;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 1rem;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    text-decoration: none;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #featured {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-list {
+        flex-direction: column;
+    }
+}
+/* Breed Profiles Section */
+#breeds {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#breeds h2 {
+    color: #3b5998;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#breeds p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Breed Cards Layout */
+.breed-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.breed-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.breed-card:hover {
+    transform: translateY(-5px);
+}
+
+.breed-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.breed-card h3 {
+    color: #3b5998;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.breed-card p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.5rem 0 1rem;
+}
+
+.breed-card a {
+    color: #3b5998;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.breed-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .breed-cards {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Back to Home Button */
+.back-button {
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+/* Care and Tips Section */
+#care-tips {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+#care-tips h2 {
+    color: #3b5998;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#care-tips p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Tips Categories Layout */
+.tips-categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.tip-category {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tip-category:hover {
+    transform: translateY(-5px);
+}
+
+.tip-category img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.tip-category h3 {
+    color: #3b5998;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.tip-category p {
+    font-size: 0.9rem;
+    color: #555;
+    margin: 0.5rem 0 1rem;
+}
+
+.tip-category a {
+    color: #3b5998;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tip-category a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .tips-categories {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Shop Section */
+#shop {
+    padding: 2rem;
+    background-color: #f1f1f1;
+    text-align: center;
+}
+
+#shop h2 {
+    color: #3b5998;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#shop p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Product Grid Layout */
+.product-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.product-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.product-card h3 {
+    color: #3b5998;
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.product-card button {
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+    background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .product-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+/* Contact Section */
+#contact {
+    padding: 2rem;
+    background-color: #f9f9f9;
+    text-align: center;
+}
+
+#contact h2 {
+    color: #3b5998;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+#contact p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+/* Contact Form */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.contact-form label {
+    align-self: flex-start;
+    font-size: 0.9rem;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        width: 90%;
+    }
+}
+/* Shop Section Styling */
+#shop {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+}
+
+#shop h2 {
+    font-size: 2rem;
+    color: #3b5998;
+    margin-bottom: 0.5rem;
+}
+
+#shop p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 1.5rem;
+}
+
+/* Product List Grid */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 1.5rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Product Card Styling */
+.product {
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+.product img {
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+
+.product h3 {
+    font-size: 1rem;
+    color: #333;
+    margin: 0.5rem 0;
+}
+
+.product p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Shop Button Styling */
+.shop-button {
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.shop-button:hover {
+    background-color: #333;
+}

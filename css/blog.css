@@ -1,0 +1,309 @@
+/* General Styling for Blog Posts */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f0f8ff;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #3b5998;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Main Content Styling */
+#blog-post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* Section Headings */
+#blog-post h2 {
+    color: #3b5998;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Paragraph and List Styling */
+#blog-post p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+#blog-post ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+#blog-post ul li {
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+footer p, footer a {
+    font-size: 1rem;
+    color: #666;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #3b5998;
+    text-decoration: underline;
+}
+/* General Styling for Blog Posts */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f0f8ff;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #3b5998;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Main Content Styling */
+#blog-post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* Section Headings */
+#blog-post h2 {
+    color: #3b5998;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Paragraph and List Styling */
+#blog-post p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+#blog-post ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+#blog-post ul li {
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+footer p, footer a {
+    font-size: 1rem;
+    color: #666;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #3b5998;
+    text-decoration: underline;
+}
+/* General Styling for Blog Posts */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #f0f8ff;
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #3b5998;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Main Content Styling */
+#blog-post {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Image Styling */
+.post-image {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+/* Section Headings */
+#blog-post h2 {
+    color: #3b5998;
+    font-size: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Paragraph and List Styling */
+#blog-post p {
+    font-size: 1rem;
+    color: #333;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+}
+
+#blog-post ul {
+    margin-top: 0.5rem;
+    padding-left: 1.5rem;
+}
+
+#blog-post ul li {
+    list-style-type: disc;
+    margin-bottom: 0.5rem;
+}
+
+/* Back Button Styling */
+.back-button {
+    display: inline-block;
+    background-color: #3b5998;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #333;
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #f9f9f9;
+}
+
+footer p, footer a {
+    font-size: 1rem;
+    color: #666;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #3b5998;
+    text-decoration: underline;
+}
