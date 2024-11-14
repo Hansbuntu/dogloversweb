@@ -46,13 +46,26 @@ header p {
 /* Product Grid Styling */
 #shop-products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 1.5rem;
     padding: 1.5rem;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    #shop-products {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on screens up to 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    #shop-products {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on screens up to 480px */
+        gap: 1rem; /* Smaller gap for compact layout */
+    }
+}
 /* Product Card Styling */
 .product-card {
     background-color: #fff;
@@ -117,15 +130,8 @@ footer a:hover {
     color: #3b5998;
     text-decoration: underline;
 }
-/* Product Grid Styling */
-#shop-products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
+
 
 /* Product Card Styling */
 .product-card {
@@ -181,15 +187,7 @@ footer a:hover {
 .buy-now:hover {
     background-color: #333;
 }
-/* General Styling */
-#shop-products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    padding: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 
 /* Product Card Styling */
 .product-card {
