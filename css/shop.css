@@ -77,13 +77,34 @@ header p {
 /* Product Grid Styling */
 #shop-products {
     display: grid;
+<<<<<<< HEAD
     gap: 1rem; /* Reduced gap */
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
     grid-template-columns: 1fr; /* Default to one column */
+=======
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+>>>>>>> 53b8420fbfe0480b1a2faaa0286b1c5dedafc4eb
 }
 
+/* Responsive Adjustments for Smaller Screens */
+@media (max-width: 768px) {
+    #shop-products {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on screens up to 768px */
+    }
+}
+
+@media (max-width: 480px) {
+    #shop-products {
+        grid-template-columns: repeat(2, 1fr); /* Two columns on screens up to 480px */
+        gap: 1rem; /* Smaller gap for compact layout */
+    }
+}
 /* Product Card Styling */
 .product-card {
     padding: 1rem; /* Reduced padding */
@@ -277,6 +298,10 @@ footer a:hover {
     text-decoration: underline;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 53b8420fbfe0480b1a2faaa0286b1c5dedafc4eb
 
 /* Product Card Styling */
 .product-card {
@@ -316,6 +341,12 @@ footer a:hover {
 }
 
 
+<<<<<<< HEAD
+=======
+.buy-now:hover {
+    background-color: #333;
+}
+>>>>>>> 53b8420fbfe0480b1a2faaa0286b1c5dedafc4eb
 
 
 /* Product Card Styling */
