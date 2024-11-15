@@ -23,16 +23,7 @@
     </button>
 </header>
 
-<!-- Cart Modal -->
-<div id="cart-modal" class="cart-modal">
-    <div class="cart-content">
-        <span class="close-cart" onclick="toggleCart()">×</span>
-        <h2>Your Cart</h2>
-        <ul id="cart-items"></ul>
-        <p id="cart-total">Total: $0.00</p>
-        <button onclick="checkout()">Checkout</button>
-    </div>
-</div>
+
 
 <!-- Shop Categories -->
 <section id="shop-categories">
@@ -45,95 +36,159 @@
 <!-- Product Grid -->
 <main id="shop-products">
 
-    <!-- Product Card 1: Dog Food -->
-    <div class="product-card" data-category="food">
-        <img src="img/premium-dog-food.jpg" alt="Premium Dog Food">
-        <h3>Organic Grain-Free Dog Food</h3>
-        <p class="price">Price: $29.99</p>
-        <div class="description">
-            <p>High-quality, grain-free food packed with natural ingredients. Ideal for dogs with allergies.</p>
+    <!-- Product Card 1: Premium Dog Food -->
+    <div class="product-card-detailed" data-category="food">
+        <img src="img/shopimgs/item1.jpg" alt="Premium Dog Food" class="product-image">
+        <div class="product-details">
+            <h3>Organic Grain-Free Dog Food</h3>
+            <p class="category">Dog Food</p>
+            <p class="options">Options: 5 flavors, 3 sizes</p>
+            <div class="rating">⭐ 4.7 <span class="reviews">(1,201)</span></div>
+            <p class="purchase-info">500+ bought in past month</p>
+            <p class="price">Price: $29.99</p>
+            <button class="buy-now" onclick="addToCart('Organic Grain-Free Dog Food', 29.99, 'img/shopimgs/item1.jpg')">Buy Now</button>
         </div>
-        <button class="buy-now" onclick="addToCart('Organic Grain-Free Dog Food', 29.99)">Buy Now</button>
     </div>
 
-    <!-- Product Card 2: Dog Treats -->
-    <div class="product-card" data-category="food">
-        <img src="img/dog-treats.jpg" alt="Dog Treats">
-        <h3>Natural Dog Treats</h3>
-        <p class="price">Price: $12.99</p>
-        <div class="description">
-            <p>Healthy and tasty treats made from natural ingredients. Perfect for training.</p>
+    <!-- Product Card 2: Natural Dog Treats -->
+    <div class="product-card-detailed" data-category="food">
+        <img src="img/shopimgs/item2.jpg" alt="Dog Treats" class="product-image">
+        <div class="product-details">
+            <h3>Natural Dog Treats</h3>
+            <p class="category">Dog Treats</p>
+            <p class="options">Options: 4 flavors</p>
+            <div class="rating">⭐ 4.5 <span class="reviews">(850)</span></div>
+            <p class="purchase-info">300+ bought in past month</p>
+            <p class="price">Price: $12.99</p>
+            <button class="buy-now" onclick="addToCart('Natural Dog Treats', 12.99, 'img/shopimgs/item2.jpg')">Buy Now</button>
         </div>
-        <button class="buy-now" onclick="addToCart('Natural Dog Treats', 12.99)">Buy Now</button>
     </div>
 
     <!-- Product Card 3: Interactive Dog Toy -->
-    <div class="product-card" data-category="toys">
-        <img src="img/interactive-toy.jpg" alt="Interactive Dog Toy">
-        <h3>Interactive Treat-Dispensing Toy</h3>
-        <p class="price">Price: $18.99</p>
-        <div class="description">
-            <p>Engages your dog’s mind and body. Dispenses treats as they play, keeping them entertained.</p>
+    <div class="product-card-detailed" data-category="toys">
+        <img src="img/shopimgs/item3.jpg" alt="Interactive Dog Toy" class="product-image">
+        <div class="product-details">
+            <h3>Interactive Treat-Dispensing Toy</h3>
+            <p class="category">Dog Toy</p>
+            <p class="options">Colors: Red, Blue</p>
+            <div class="rating">⭐ 4.8 <span class="reviews">(1,540)</span></div>
+            <p class="purchase-info">600+ bought in past month</p>
+            <p class="price">Price: $18.99</p>
+            <button class="buy-now" onclick="addToCart('Interactive Treat-Dispensing Toy', 18.99, 'img/shopimgs/item3.jpg')">Buy Now</button>
         </div>
-        <button class="buy-now" onclick="addToCart('Interactive Treat-Dispensing Toy', 18.99)">Buy Now</button>
     </div>
 
     <!-- Product Card 4: Durable Chew Toy -->
-    <div class="product-card" data-category="toys">
-        <img src="img/durable-chew-toy.jpg" alt="Durable Chew Toy">
-        <h3>Indestructible Chew Toy</h3>
-        <p class="price">Price: $15.99</p>
-        <div class="description">
-            <p>Made from durable materials, perfect for aggressive chewers. Helps maintain dental health.</p>
+    <div class="product-card-detailed" data-category="toys">
+        <img src="img/shopimgs/item4.jpg" alt="Durable Chew Toy" class="product-image">
+        <div class="product-details">
+            <h3>Indestructible Chew Toy</h3>
+            <p class="category">Dog Toy</p>
+            <p class="options">Sizes: Small, Medium, Large</p>
+            <div class="rating">⭐ 4.6 <span class="reviews">(2,340)</span></div>
+            <p class="purchase-info">900+ bought in past month</p>
+            <p class="price">Price: $15.99</p>
+            <button class="buy-now" onclick="addToCart('Indestructible Chew Toy', 15.99, 'img/shopimgs/item4.jpg')">Buy Now</button>
         </div>
-        <button class="buy-now" onclick="addToCart('Indestructible Chew Toy', 15.99)">Buy Now</button>
     </div>
 
-    <!-- Product Card 5: Dog Leash -->
-    <div class="product-card" data-category="accessories">
-        <img src="img/dog-leash.jpg" alt="Dog Leash">
-        <h3>Reflective Dog Leash</h3>
-        <p class="price">Price: $9.99</p>
-        <div class="description">
-            <p>Strong and reflective for night walks, providing comfort and safety for both dog and owner.</p>
+    <!-- Product Card 5: Reflective Dog Leash -->
+    <div class="product-card-detailed" data-category="accessories">
+        <img src="img/shopimgs/item5.jpg" alt="Dog Leash" class="product-image">
+        <div class="product-details">
+            <h3>Reflective Dog Leash</h3>
+            <p class="category">Dog Accessory</p>
+            <p class="options">Lengths: 4 ft, 6 ft</p>
+            <div class="rating">⭐ 4.7 <span class="reviews">(732)</span></div>
+            <p class="purchase-info">250+ bought in past month</p>
+            <p class="price">Price: $9.99</p>
+            <button class="buy-now" onclick="addToCart('Reflective Dog Leash', 9.99, 'img/shopimgs/item5.jpg')">Buy Now</button>
         </div>
-        <button class="buy-now" onclick="addToCart('Reflective Dog Leash', 9.99)">Buy Now</button>
     </div>
 
-    <!-- Product Card 6: Dog Collar -->
-    <div class="product-card" data-category="accessories">
-        <img src="img/dog-collar.jpg" alt="Dog Collar">
-        <h3>Adjustable Dog Collar</h3>
-        <p class="price">Price: $10.99</p>
-        <div class="description">
-            <p>Comfortable, adjustable, and durable. Available in various colors and sizes.</p>
+    <!-- Product Card 6: Adjustable Dog Collar -->
+    <div class="product-card-detailed" data-category="accessories">
+        <img src="img/shopimgs/item6.jpg" alt="Dog Collar" class="product-image">
+        <div class="product-details">
+            <h3>Adjustable Dog Collar</h3>
+            <p class="category">Dog Accessory</p>
+            <p class="options">Sizes: Small, Medium, Large</p>
+            <div class="rating">⭐ 4.4 <span class="reviews">(985)</span></div>
+            <p class="purchase-info">300+ bought in past month</p>
+            <p class="price">Price: $10.99</p>
+            <button class="buy-now" onclick="addToCart('Adjustable Dog Collar', 10.99, 'img/shopimgs/item6.jpg')">Buy Now</button>
         </div>
-        <button class="buy-now" onclick="addToCart('Adjustable Dog Collar', 10.99)">Buy Now</button>
     </div>
 
     <!-- Product Card 7: Orthopedic Dog Bed -->
-    <div class="product-card" data-category="accessories">
-        <img src="img/dog-bed.jpg" alt="Orthopedic Dog Bed">
-        <h3>Orthopedic Dog Bed</h3>
-        <p class="price">Price: $49.99</p>
-        <div class="description">
-            <p>Ultra-comfortable bed with memory foam for support, ideal for older dogs or those with joint issues.</p>
+    <div class="product-card-detailed" data-category="accessories">
+        <img src="img/shopimgs/item7.jpg" alt="Orthopedic Dog Bed" class="product-image">
+        <div class="product-details">
+            <h3>Orthopedic Dog Bed</h3>
+            <p class="category">Dog Bed</p>
+            <p class="options">Sizes: Small, Medium, Large</p>
+            <div class="rating">⭐ 4.9 <span class="reviews">(4,210)</span></div>
+            <p class="purchase-info">1,000+ bought in past month</p>
+            <p class="price">Price: $49.99</p>
+            <button class="buy-now" onclick="addToCart('Orthopedic Dog Bed', 49.99, 'img/shopimgs/item7.jpg')">Buy Now</button>
         </div>
-        <button class="buy-now" onclick="addToCart('Orthopedic Dog Bed', 49.99)">Buy Now</button>
     </div>
 
     <!-- Product Card 8: Portable Dog Water Bottle -->
-    <div class="product-card" data-category="accessories">
-        <img src="img/portable-water-bottle.jpg" alt="Portable Dog Water Bottle">
-        <h3>Portable Dog Water Bottle</h3>
-        <p class="price">Price: $15.99</p>
-        <div class="description">
-            <p>Leak-proof water bottle for on-the-go hydration. Perfect for travel and outdoor activities.</p>
+    <div class="product-card-detailed" data-category="accessories">
+        <img src="img/shopimgs/item8.jpg" alt="Portable Dog Water Bottle" class="product-image">
+        <div class="product-details">
+            <h3>Portable Dog Water Bottle</h3>
+            <p class="category">Dog Accessory</p>
+            <p class="options">Capacity: 12 oz, 20 oz</p>
+            <div class="rating">⭐ 4.5 <span class="reviews">(1,050)</span></div>
+            <p class="purchase-info">450+ bought in past month</p>
+            <p class="price">Price: $15.99</p>
+            <button class="buy-now" onclick="addToCart('Portable Dog Water Bottle', 15.99, 'img/shopimgs/item8.jpg')">Buy Now</button>
         </div>
-        <button class="buy-now" onclick="addToCart('Portable Dog Water Bottle', 15.99)">Buy Now</button>
+    </div>
+
+    <!-- Product Card 9: Dog Shampoo -->
+    <div class="product-card-detailed" data-category="grooming">
+        <img src="img/shopimgs/item9.jpg" alt="Dog Shampoo" class="product-image">
+        <div class="product-details">
+            <h3>Hypoallergenic Dog Shampoo</h3>
+            <p class="category">Grooming</p>
+            <p class="options">Scents: Lavender, Unscented</p>
+            <div class="rating">⭐ 4.8 <span class="reviews">(1,110)</span></div>
+            <p class="purchase-info">350+ bought in past month</p>
+            <p class="price">Price: $8.99</p>
+            <button class="buy-now" onclick="addToCart('Hypoallergenic Dog Shampoo', 8.99, 'img/shopimgs/item9.jpg')">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- Product Card 10: Dog Toothbrush Kit -->
+    <div class="product-card-detailed" data-category="grooming">
+        <img src="img/shopimgs/item10.jpg" alt="Dog Toothbrush Kit" class="product-image">
+        <div class="product-details">
+            <h3>Dog Toothbrush and Toothpaste Kit</h3>
+            <p class="category">Grooming</p>
+            <p class="options">Flavors: Mint, Peanut Butter</p>
+            <div class="rating">⭐ 4.3 <span class="reviews">(670)</span></div>
+            <p class="purchase-info">150+ bought in past month</p>
+            <p class="price">Price: $6.99</p>
+            <button class="buy-now" onclick="addToCart('Dog Toothbrush Kit', 6.99, 'img/shopimgs/item10.jpg')">Buy Now</button>
+        </div>
     </div>
 
 </main>
+
+<!-- Cart Modal -->
+<div id="cart-modal" class="cart-modal">
+    <span class="close-cart" onclick="toggleCart()">×</span>
+    <h2>Your Cart</h2>
+    <div id="cart-items">
+        <!-- Cart items will be dynamically inserted here -->
+    </div>
+    <p id="cart-total" class="total">Total: $0.00</p>
+    <button class="checkout-button" onclick="checkout()">Checkout</button>
+</div>
+
 
 
 

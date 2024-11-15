@@ -43,15 +43,187 @@ header p {
     background-color: #333;
 }
 
+/* Default Layout (Single Column) */
+#shop-products {
+    display: grid !important;
+    gap: 1.5rem !important;
+    grid-template-columns: 1fr !important;
+    padding: 1.5rem !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+}
+
+/* Two Columns on Small Screens */
+@media (min-width: 480px) {
+    #shop-products {
+        grid-template-columns: repeat(2, 1fr) !important; /* Two items per row */
+    }
+}
+
+/* Three Columns on Medium Screens */
+@media (min-width: 768px) {
+    #shop-products {
+        grid-template-columns: repeat(3, 1fr) !important; /* Three items per row */
+    }
+}
+
+/* Four Columns on Large Screens */
+@media (min-width: 1024px) {
+    #shop-products {
+        grid-template-columns: repeat(4, 1fr) !important; /* Four items per row */
+    }
+}
+
 /* Product Grid Styling */
 #shop-products {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 1.5rem;
-    max-width: 1000px;
+    gap: 1rem; /* Reduced gap */
+    padding: 1rem;
+    max-width: 1200px;
     margin: 0 auto;
+    grid-template-columns: 1fr; /* Default to one column */
 }
+
+/* Product Card Styling */
+.product-card {
+    padding: 1rem; /* Reduced padding */
+    text-align: center;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 100%; /* Allow flexibility in width */
+}
+
+/* Smaller Font Sizes and Reduced Margins */
+.product-card h3 {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    margin: 0.3rem 0;
+}
+
+/* Adjustments for Small Screens */
+@media (min-width: 480px) {
+    #shop-products {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row */
+    }
+
+    .product-card {
+        max-width: 90%; /* Allow each card to adjust within its grid column */
+    }
+}
+
+/* Adjustments for Medium Screens */
+@media (min-width: 768px) {
+    #shop-products {
+        grid-template-columns: repeat(3, 1fr); /* Three items per row */
+    }
+}
+
+/* Adjustments for Large Screens */
+@media (min-width: 1024px) {
+    #shop-products {
+        grid-template-columns: repeat(4, 1fr); /* Four items per row */
+    }
+}
+
+/* Container for each product with flex layout */
+.product-card-detailed {
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    max-width: 100%;
+}
+
+/* Styling for the product image */
+.product-image {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 1rem;
+}
+
+/* Details container */
+.product-details {
+    flex: 1;
+}
+
+/* Title styling */
+.product-details h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin: 0;
+}
+
+/* Category */
+.category {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* Options styling */
+.options {
+    font-size: 0.9rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Rating section styling */
+.rating {
+    display: flex;
+    align-items: center;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    color: #ff9800;
+}
+
+/* Reviews styling */
+.reviews {
+    font-size: 0.9rem;
+    color: #888;
+    margin-left: 0.3rem;
+}
+
+/* Purchase info */
+.purchase-info {
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: 0.5rem;
+}
+
+/* Price styling */
+.price {
+    font-size: 1.1rem;
+    color: #333;
+    font-weight: bold;
+    margin-top: 0.5rem;
+}
+
+/* Buy Now button */
+.buy-now {
+    background-color: #3b5998; /* Restore original background */
+    color: white; /* Text color */
+    padding: 0.5rem 1rem; /* Spacing */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 1rem;
+    display: inline-block; /* Ensure it's inline for positioning */
+}
+
+
+.buy-now:hover {
+    background-color: #333;
+}
+
 
 /* Product Card Styling */
 .product-card {
@@ -85,20 +257,7 @@ header p {
     margin: 0.5rem 0;
 }
 
-/* Buy Now Button Styling */
-.buy-now {
-    background-color: #3b5998;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
 
-.buy-now:hover {
-    background-color: #333;
-}
 
 /* Footer Styling */
 footer {
@@ -117,15 +276,7 @@ footer a:hover {
     color: #3b5998;
     text-decoration: underline;
 }
-/* Product Grid Styling */
-#shop-products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    padding: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 
 /* Product Card Styling */
 .product-card {
@@ -164,32 +315,8 @@ footer a:hover {
     color: #3b5998;
 }
 
-/* Buy Now Button Styling */
-.buy-now {
-    background-color: #3b5998;
-    color: #fff;
-    border: none;
-    padding: 0.5rem 1rem;
-    font-size: 1rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 1rem;
-    transition: background-color 0.3s ease;
-}
 
-.buy-now:hover {
-    background-color: #333;
-}
-/* General Styling */
-#shop-products {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 1rem;
-    padding: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-}
+
 
 /* Product Card Styling */
 .product-card {
@@ -231,24 +358,7 @@ footer a:hover {
     margin: 0.5rem 0;
 }
 
-/* Buy Now Button */
-.buy-now {
-    background-color: #3b5998;
-    color: #fff;
-    border: none;
-    padding: 0.5rem;
-    font-size: 0.9rem;
-    font-weight: bold;
-    border-radius: 5px;
-    cursor: pointer;
-    margin-top: 0.5rem;
-    display: none;
-    transition: background-color 0.3s ease;
-}
 
-.buy-now:hover {
-    background-color: #333;
-}
 
 /* Hover Effect to Expand Card */
 .product-card:hover {
@@ -292,59 +402,117 @@ footer a:hover {
 }
 /* Cart Modal Styling */
 .cart-modal {
-    display: none;
+    display: none; /* Hide the modal initially */
     position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 350px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
 }
 
-.cart-content {
-    background-color: #fff;
-    margin: 10% auto;
-    padding: 20px;
-    width: 90%;
-    max-width: 500px;
-    border-radius: 8px;
+.cart-modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #333;
     text-align: center;
 }
 
-.close-cart {
-    float: right;
-    font-size: 24px;
-    cursor: pointer;
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
 }
 
-#cart-items {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
+.cart-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin-right: 10px;
 }
 
-#cart-total {
-    font-size: 1.2rem;
-    margin-top: 1rem;
+.cart-item-info {
+    flex-grow: 1;
+    margin-right: 10px;
 }
 
-#cart-button {
-    float: right;
-    margin-top: -2.5rem;
-    padding: 0.5rem 1rem;
+.cart-item-controls {
+    display: flex;
+    align-items: center;
+}
+
+.cart-item-controls button {
     background-color: #3b5998;
     color: #fff;
     border: none;
+    padding: 0.3rem 0.6rem;
+    border-radius: 3px;
+    cursor: pointer;
+    margin: 0 0.2rem;
+}
+
+.cart-item-controls button:hover {
+    background-color: #2a437a;
+}
+
+.total {
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.checkout-button {
+    background-color: #3b5998;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 1rem;
+    margin-top: 1rem;
 }
+
+.close-cart {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #666;
+}
+
+/* Bullet Points for List Styling */
+.cart-modal ul {
+    list-style-type: disc;
+    padding-left: 1.2rem;
+    margin: 0;
+}
+
+.cart-modal ul li {
+    color: #555;
+    padding: 0.5rem 0;
+}
+
+/* Modal Shadow Effect for Depth */
+.cart-modal {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+
 /* Positioning the Cart Icon */
 #cart-button {
     position: absolute;
-    top: 50px;
-    right: 50px;
+    top: 20px; /* Adjust as needed for alignment */
+    right: 20px; /* Adjust as needed for alignment */
     padding: 0.5rem;
     background-color: #3b5998;
     color: #fff;
@@ -354,7 +522,16 @@ footer a:hover {
     font-size: 1.2rem;
     display: flex;
     align-items: center;
+    z-index: 1; /* Ensure it stays on top of other elements */
 }
+
+/* Ensure the header or container is positioned relatively */
+header {
+    position: relative; /* This makes the cart button position relative to the header */
+    padding: 1rem;
+    text-align: center;
+}
+
 
 #cart-count {
     margin-left: 5px;
